@@ -1,0 +1,72 @@
+import unittest
+import os
+
+from lib.space import Space
+import lib.space_file_io  as space_file_io
+    
+
+test_file = os.path.join( '.',  'saved_spaces', 'auto-test-spc.csv' )
+    
+class SpaceFileIOTestCase ( unittest.TestCase ):
+
+    
+    
+    def tearDown(self):
+        os.remove ( test_file )
+        
+    #-------------------------------------------------------------------------
+        
+    def check_space_values (self, s ):
+                                             
+        #check the values as entered above
+        for x,row in enumerate ( s ):
+            for y, val in enumerate ( row ):
+                
+                if ( x == 0 and y == 0 ):
+                    self.assertEqual(val, 1)
+                    
+                elif ( x == 5 and y == 0 ):
+                    self.assertEqual(val, 2)
+                
+                elif ( x == 6 and y == 6 ):
+                    self.assertEqual(val, 3)
+                    
+                elif ( x == 9 and y == 5):
+                    self.assertEqual(val, 4)
+                    
+                elif ( x == 9 and y == 9):
+                    self.assertEqual(val, 5)                   
+                else:
+                    self.assertEqual(val, 0)
+                    
+    #-------------------------------------------------------------------------
+                        
+    def set_test_data (self, space):
+        space[0][0] = 1
+        space[5][0] = 2
+        space[6][6] = 3
+        space[9][5] = 4
+        space[9][9] = 5
+
+    #-------------------------------------------------------------------------
+        
+        
+    def test_read_and_write (self):
+        """
+        Writes a file using a Space object that with the Numpy array
+        representation.
+        """
+        
+        space = Space ( 10, 10 )
+                        
+        self.set_test_data(space)
+                        
+        
+        
+        space_file_io.write_space_state(space, test_file)
+               
+        space_from_file = \
+            space_file_io.read_space_state ( test_file )
+
+        self.check_space_values ( space )
+        self.check_space_values ( space_from_file ) 

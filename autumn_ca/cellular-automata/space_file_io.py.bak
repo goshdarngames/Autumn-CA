@@ -1,0 +1,53 @@
+import os
+import csv
+
+from .space import Space
+
+
+def write_space_state(space, file_path):
+    
+    
+    os.makedirs( os.path.dirname(file_path) , exist_ok = True )
+        
+        
+    with open(file_path, "w+", newline='') as csv_file:
+        
+        csvWriter = csv.writer(csv_file)
+        
+        csvWriter.writerows( space )
+        
+
+#-----------------------------------------------------------------------------
+
+def read_space_state(file_path):
+    
+    """
+    Reads a CSV space file and creates a new space object to hold the
+    data.
+    
+    The 'data_structure' argument should be the internal data structure
+    representation to use.
+    """
+         
+    with open(file_path, 'r') as csv_file:
+        
+        file_data = [] 
+        
+        for row in csv.reader(csv_file):
+            file_data.append(row)
+
+        #read the number of rows and columns to determine width/height
+        width = len(file_data)
+        height = len(file_data[0])    
+        
+        file_space = Space( width, height )     
+        
+        #copy file data to internal representation
+        for x, rows in enumerate( file_data ):
+            for y, val in enumerate( rows ):
+            
+                file_space[x][y] = int(val)
+        
+        return file_space
+        
+

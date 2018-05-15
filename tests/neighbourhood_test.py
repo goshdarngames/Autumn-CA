@@ -1,7 +1,9 @@
 import unittest
 import numpy as np
 
-from .neighbourhood import *
+import autumn_ca
+
+from autumn_ca.cellular_automata.neighbourhood import *
 
 
 class NeighbourhoodTestCase ( unittest.TestCase ):    

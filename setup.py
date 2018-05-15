@@ -17,12 +17,13 @@ with open(path.join(here, 'HISTORY.rst'), encoding='utf-8') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    # TODO: put package requirements here
-    'click',
+    'numpy',
+    'cython'
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'numpy',
+    'cython'
 ]
 
 setup(

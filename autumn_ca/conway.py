@@ -1,10 +1,10 @@
 import os
 from random import randint
 
-from lib.simulation import Simulation
-from lib.pygame_simulation_viewer import simulation_viewer
+from cellular_automata.simulation import Simulation
+from cellular_automata.pygame_simulation_viewer import simulation_viewer
 
-from lib.rule_function import conway_rule
+from cellular_automata.rule_function import conway_rule
 
 #import lib.space_file_io  as space_file_io
 

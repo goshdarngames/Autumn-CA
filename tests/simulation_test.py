@@ -1,6 +1,6 @@
 import unittest
 
-from .simulation import Simulation
+from autumn_ca.cellular_automata.simulation import Simulation
 
 def mock_rule ( array_in, array_out ):
     

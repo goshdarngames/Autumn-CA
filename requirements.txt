@@ -1,1 +1,2 @@
-click
+Cython==0.28.2
+numpy==1.14.3

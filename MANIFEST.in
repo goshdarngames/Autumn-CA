@@ -12,3 +12,5 @@ recursive-include docs *.rst conf.py Makefile make.bat
 
 include versioneer.py
 include autumn_ca/_version.py
+
+global-include *.txt *.rst *.pyx *.pxd *.c *.h

@@ -6,7 +6,12 @@ from codecs import open
 from os import path
 from setuptools import setup, find_packages
 
+from setuptools.extension import Extension
+from Cython.Build import cythonize
+
 import versioneer
+
+import numpy
 
 here = path.abspath(path.dirname(__file__))
 
@@ -24,6 +29,17 @@ requirements = [
 test_requirements = [
     'numpy',
     'cython'
+]
+
+#Cython classes
+extensions = [
+   Extension(
+      "autumn_ca.cellular_automata.neighbourhood",
+      [
+         "autumn_ca/cellular_automata/neighbourhood.pyx"
+      ],
+      include_dirs=[numpy.get_include ()]
+   )
 ]
 
 setup(
@@ -58,4 +74,6 @@ setup(
     ],
     test_suite='tests',
     tests_require=test_requirements,
+
+    ext_modules = cythonize(extensions)
 )

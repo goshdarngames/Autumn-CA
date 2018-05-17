@@ -305,8 +305,8 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">04</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">05</span>: </pre>
 <pre class="cython line score-93" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">06</span>: cpdef cnp.ndarray[cnp.uint8_t, ndim=1] moore_neighbourhood(</pre>
-<pre class='cython code score-93 '>static PyObject *__pyx_pw_6Conway_3lib_13neighbourhood_1moore_neighbourhood(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyArrayObject *__pyx_f_6Conway_3lib_13neighbourhood_moore_neighbourhood(PyArrayObject *__pyx_v_np_2d_array, int __pyx_v_x, int __pyx_v_y, PyArrayObject *__pyx_v_n_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+<pre class='cython code score-93 '>static PyObject *__pyx_pw_9autumn_ca_17cellular_automata_13neighbourhood_1moore_neighbourhood(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_9autumn_ca_17cellular_automata_13neighbourhood_moore_neighbourhood(PyArrayObject *__pyx_v_np_2d_array, int __pyx_v_x, int __pyx_v_y, PyArrayObject *__pyx_v_n_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_width;
   int __pyx_v_height;
   int __pyx_v_n_x;
@@ -351,7 +351,7 @@ static PyArrayObject *__pyx_f_6Conway_3lib_13neighbourhood_moore_neighbourhood(P
     <span class='pyx_c_api'>__Pyx_SafeReleaseBuffer</span>(&amp;__pyx_pybuffernd_n_out.rcbuffer-&gt;pybuffer);
     <span class='pyx_c_api'>__Pyx_SafeReleaseBuffer</span>(&amp;__pyx_pybuffernd_np_2d_array.rcbuffer-&gt;pybuffer);
   <span class='pyx_c_api'>__Pyx_ErrRestore</span>(__pyx_type, __pyx_value, __pyx_tb);}
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("Conway.lib.neighbourhood.moore_neighbourhood", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("autumn_ca.cellular_automata.neighbourhood.moore_neighbourhood", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -364,8 +364,9 @@ static PyArrayObject *__pyx_f_6Conway_3lib_13neighbourhood_moore_neighbourhood(P
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Conway_3lib_13neighbourhood_1moore_neighbourhood(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_6Conway_3lib_13neighbourhood_1moore_neighbourhood(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9autumn_ca_17cellular_automata_13neighbourhood_1moore_neighbourhood(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9autumn_ca_17cellular_automata_13neighbourhood_moore_neighbourhood[] = "\n    Calculates the 9 cells of the moore neighbourhood\n    at position (x,y) of the input np_2d_array.\n\n    Writes results in the n_out buffer supplied.  The buffer\n    is used to save objects testing thousands of neighbours\n    from recreating it.\n    ";
+static PyObject *__pyx_pw_9autumn_ca_17cellular_automata_13neighbourhood_1moore_neighbourhood(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_np_2d_array = 0;
   int __pyx_v_x;
   int __pyx_v_y;
@@ -435,13 +436,13 @@ static PyObject *__pyx_pw_6Conway_3lib_13neighbourhood_1moore_neighbourhood(PyOb
   __pyx_L5_argtuple_error:;
   <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("moore_neighbourhood", 1, 4, 4, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L3_error)</span>
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("Conway.lib.neighbourhood.moore_neighbourhood", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("autumn_ca.cellular_automata.neighbourhood.moore_neighbourhood", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!<span class='pyx_c_api'>__Pyx_ArgTypeTest</span>(((PyObject *)__pyx_v_np_2d_array), __pyx_ptype_5numpy_ndarray, 1, "np_2d_array", 0))) <span class='error_goto'>__PYX_ERR(0, 7, __pyx_L1_error)</span>
   if (unlikely(!<span class='pyx_c_api'>__Pyx_ArgTypeTest</span>(((PyObject *)__pyx_v_n_out), __pyx_ptype_5numpy_ndarray, 1, "n_out", 0))) <span class='error_goto'>__PYX_ERR(0, 9, __pyx_L1_error)</span>
-  __pyx_r = __pyx_pf_6Conway_3lib_13neighbourhood_moore_neighbourhood(__pyx_self, __pyx_v_np_2d_array, __pyx_v_x, __pyx_v_y, __pyx_v_n_out);
+  __pyx_r = __pyx_pf_9autumn_ca_17cellular_automata_13neighbourhood_moore_neighbourhood(__pyx_self, __pyx_v_np_2d_array, __pyx_v_x, __pyx_v_y, __pyx_v_n_out);
 
   /* function exit code */
   goto __pyx_L0;
@@ -452,7 +453,7 @@ static PyObject *__pyx_pw_6Conway_3lib_13neighbourhood_1moore_neighbourhood(PyOb
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Conway_3lib_13neighbourhood_moore_neighbourhood(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_np_2d_array, int __pyx_v_x, int __pyx_v_y, PyArrayObject *__pyx_v_n_out) {
+static PyObject *__pyx_pf_9autumn_ca_17cellular_automata_13neighbourhood_moore_neighbourhood(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_np_2d_array, int __pyx_v_x, int __pyx_v_y, PyArrayObject *__pyx_v_n_out) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_n_out;
   __Pyx_Buffer __pyx_pybuffer_n_out;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_np_2d_array;
@@ -479,7 +480,7 @@ static PyObject *__pyx_pf_6Conway_3lib_13neighbourhood_moore_neighbourhood(CYTHO
   }
   __pyx_pybuffernd_n_out.diminfo[0].strides = __pyx_pybuffernd_n_out.rcbuffer-&gt;pybuffer.strides[0]; __pyx_pybuffernd_n_out.diminfo[0].shape = __pyx_pybuffernd_n_out.rcbuffer-&gt;pybuffer.shape[0];
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6Conway_3lib_13neighbourhood_moore_neighbourhood(__pyx_v_np_2d_array, __pyx_v_x, __pyx_v_y, __pyx_v_n_out, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
+  __pyx_t_1 = ((PyObject *)__pyx_f_9autumn_ca_17cellular_automata_13neighbourhood_moore_neighbourhood(__pyx_v_np_2d_array, __pyx_v_x, __pyx_v_y, __pyx_v_n_out, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -495,7 +496,7 @@ static PyObject *__pyx_pf_6Conway_3lib_13neighbourhood_moore_neighbourhood(CYTHO
     <span class='pyx_c_api'>__Pyx_SafeReleaseBuffer</span>(&amp;__pyx_pybuffernd_n_out.rcbuffer-&gt;pybuffer);
     <span class='pyx_c_api'>__Pyx_SafeReleaseBuffer</span>(&amp;__pyx_pybuffernd_np_2d_array.rcbuffer-&gt;pybuffer);
   <span class='pyx_c_api'>__Pyx_ErrRestore</span>(__pyx_type, __pyx_value, __pyx_tb);}
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("Conway.lib.neighbourhood.moore_neighbourhood", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("autumn_ca.cellular_automata.neighbourhood.moore_neighbourhood", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -511,46 +512,55 @@ static PyObject *__pyx_pf_6Conway_3lib_13neighbourhood_moore_neighbourhood(CYTHO
 <pre class="cython line score-0">&#xA0;<span class="">09</span>:     cnp.ndarray[cnp.uint8_t, ndim=1] n_out</pre>
 <pre class="cython line score-0">&#xA0;<span class="">10</span>:     ):</pre>
 <pre class="cython line score-0">&#xA0;<span class="">11</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">12</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">13</span>:     cdef int width = np_2d_array.shape[0]</pre>
+<pre class="cython line score-0">&#xA0;<span class="">12</span>:     """</pre>
+<pre class="cython line score-0">&#xA0;<span class="">13</span>:     Calculates the 9 cells of the moore neighbourhood</pre>
+<pre class="cython line score-0">&#xA0;<span class="">14</span>:     at position (x,y) of the input np_2d_array.</pre>
+<pre class="cython line score-0">&#xA0;<span class="">15</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">16</span>:     Writes results in the n_out buffer supplied.  The buffer</pre>
+<pre class="cython line score-0">&#xA0;<span class="">17</span>:     is used to save objects testing thousands of neighbours</pre>
+<pre class="cython line score-0">&#xA0;<span class="">18</span>:     from recreating it.</pre>
+<pre class="cython line score-0">&#xA0;<span class="">19</span>:     """</pre>
+<pre class="cython line score-0">&#xA0;<span class="">20</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">21</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">22</span>:     cdef int width = np_2d_array.shape[0]</pre>
 <pre class='cython code score-0 '>  __pyx_v_width = (__pyx_v_np_2d_array-&gt;dimensions[0]);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">14</span>:     cdef int height = np_2d_array.shape[1]</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">23</span>:     cdef int height = np_2d_array.shape[1]</pre>
 <pre class='cython code score-0 '>  __pyx_v_height = (__pyx_v_np_2d_array-&gt;dimensions[1]);
-</pre><pre class="cython line score-0">&#xA0;<span class="">15</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">16</span>:     cdef int n_x, n_y = 0</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">24</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">25</span>:     #the index of the current neighbour</pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">26</span>:     cdef int n_x, n_y = 0</pre>
 <pre class='cython code score-0 '>  __pyx_v_n_y = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">17</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">18</span>:     cdef int i,j = 0</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">27</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">28</span>:     #loop counters for sampling 2D array input</pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">29</span>:     cdef int i,j = 0</pre>
 <pre class='cython code score-0 '>  __pyx_v_j = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">19</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">20</span>:     cdef int count = 0</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">30</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">31</span>:     #count for the 1D output array</pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">32</span>:     cdef int count = 0</pre>
 <pre class='cython code score-0 '>  __pyx_v_count = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">21</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">22</span>:     #loop through -1 to 0</pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">23</span>:     for i in range ( 3 ):</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">33</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">34</span>:     #loop through -1 to 0</pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">35</span>:     for i in range ( 3 ):</pre>
 <pre class='cython code score-0 '>  for (__pyx_t_1 = 0; __pyx_t_1 &lt; 3; __pyx_t_1+=1) {
     __pyx_v_i = __pyx_t_1;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">24</span>:         for j in range ( 3 ):</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">36</span>:         for j in range ( 3 ):</pre>
 <pre class='cython code score-0 '>    for (__pyx_t_2 = 0; __pyx_t_2 &lt; 3; __pyx_t_2+=1) {
       __pyx_v_j = __pyx_t_2;
-</pre><pre class="cython line score-0">&#xA0;<span class="">25</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">26</span>:             n_x = ( width + x + i - 1 ) % width</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">37</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">38</span>:             n_x = ( width + x + i - 1 ) % width</pre>
 <pre class='cython code score-0 '>      __pyx_v_n_x = ((((__pyx_v_width + __pyx_v_x) + __pyx_v_i) - 1) % __pyx_v_width);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">27</span>:             n_y = ( height + y + j - 1 ) % height</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">39</span>:             n_y = ( height + y + j - 1 ) % height</pre>
 <pre class='cython code score-0 '>      __pyx_v_n_y = ((((__pyx_v_height + __pyx_v_y) + __pyx_v_j) - 1) % __pyx_v_height);
-</pre><pre class="cython line score-0">&#xA0;<span class="">28</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">29</span>:             #n_x = (x + i-1) % width</pre>
-<pre class="cython line score-0">&#xA0;<span class="">30</span>:             #n_y = (y + j-1) % height</pre>
-<pre class="cython line score-0">&#xA0;<span class="">31</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">32</span>:             n_out [ count ] =  np_2d_array [n_x, n_y]</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">40</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">41</span>:             n_out [ count ] =  np_2d_array [n_x, n_y]</pre>
 <pre class='cython code score-0 '>      __pyx_t_3 = __pyx_v_n_x;
       __pyx_t_4 = __pyx_v_n_y;
       __pyx_t_5 = __pyx_v_count;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_n_out.rcbuffer-&gt;pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_n_out.diminfo[0].strides) = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_np_2d_array.rcbuffer-&gt;pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_np_2d_array.diminfo[0].strides, __pyx_t_4, __pyx_pybuffernd_np_2d_array.diminfo[1].strides));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">33</span>:             count+=1</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">42</span>:             count+=1</pre>
 <pre class='cython code score-0 '>      __pyx_v_count = (__pyx_v_count + 1);
     }
   }
-</pre><pre class="cython line score-0">&#xA0;<span class="">34</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">35</span>: </pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">43</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">44</span>: </pre>
 </div></body></html>

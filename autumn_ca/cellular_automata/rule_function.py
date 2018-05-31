@@ -1,6 +1,6 @@
 import numpy as np
 
-from cellular_automata.neighbourhood import *
+from autumn_ca.cellular_automata.neighbourhood import *
 
 def conway_rule ( space_in, space_out ):
 
